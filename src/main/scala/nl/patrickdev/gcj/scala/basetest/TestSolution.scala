@@ -3,29 +3,25 @@ package nl.patrickdev.gcj.scala.basetest
 import java.io._
 
 object TestSolution extends BaseSolution {
-  override def inputFile = "D:\\Cloud\\programming\\scala\\gcjscala\\src\\main\\scala\\nl\\patrickdev\\gcj\\scala\\basetest\\sample.in"
+  override def inputFile = "src/main/scala/nl/patrickdev/gcj/scala/basetest/sample.in"
 
-  override def solve: Any = {
-    in.nextInt * 3
+  override def solve = {
+    5
   }
 }
 
 abstract class BaseSolution extends App {
   def inputFile: String
+
   def solve: Any
 
   val in = new In(inputFile)
   val out = new Out(inputFile.replace(".in", ".out"))
 
-  startLoop()
-
-  def startLoop(): Unit = {
-    for (i <- 1 to in.nextInt) {
-      out.add(s"Case #$i: $solve")
-    }
-
-    out.write()
+  for (i <- 1 to in.nextInt) {
+    out.add(s"Case #$i: $solve")
   }
+  out.write()
 
   class In(inputFile: String) {
     private val br: BufferedReader = new BufferedReader(new FileReader(inputFile))
@@ -75,4 +71,5 @@ abstract class BaseSolution extends App {
       bw.close()
     }
   }
+
 }
