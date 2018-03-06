@@ -1,4 +1,4 @@
-name := "gcj2018_scala"
+name := "gcj-scala"
 
 version := "0.1"
 

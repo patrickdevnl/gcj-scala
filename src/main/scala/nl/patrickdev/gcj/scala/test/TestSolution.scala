@@ -1,9 +1,9 @@
-package nl.patrickdev.gcj2018_scala.test
+package nl.patrickdev.gcj.scala.test
 
 import java.io._
 
 object TestSolution extends BaseSolution {
-  override def inputFile = "D:\\Cloud\\programming\\gcj2018_scala\\src\\main\\scala\\nl\\patrickdev\\gcj2018_scala\\test\\sample.in"
+  override def inputFile = "D:\\Cloud\\programming\\gcjscala\\src\\main\\scala\\nl\\patrickdev\\gcj\\scala\\test\\sample.in"
 
   override def solve: Any = {
     in.nextInt * 3
