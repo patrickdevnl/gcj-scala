@@ -1,9 +1,9 @@
-package nl.patrickdev.gcj.scala.test
+package nl.patrickdev.gcj.scala.basetest
 
 import java.io._
 
 object TestSolution extends BaseSolution {
-  override def inputFile = "D:\\Cloud\\programming\\gcjscala\\src\\main\\scala\\nl\\patrickdev\\gcj\\scala\\test\\sample.in"
+  override def inputFile = "D:\\Cloud\\programming\\scala\\gcjscala\\src\\main\\scala\\nl\\patrickdev\\gcj\\scala\\basetest\\sample.in"
 
   override def solve: Any = {
     in.nextInt * 3
@@ -21,7 +21,7 @@ abstract class BaseSolution extends App {
 
   def startLoop(): Unit = {
     for (i <- 1 to in.nextInt) {
-      out.add(s"Case #$i: ${solve.toString}")
+      out.add(s"Case #$i: $solve")
     }
 
     out.write()
